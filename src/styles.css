@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.ls {
+  width: 30%;
+  float: right;
+}
+.ls li {
+  color: blue;
+  cursor: pointer;
+  list-style: none;
+}
+.components {
+  width: 65%;
+}
+.prettyprint {
+  color: #fff;
+  font-size: 16px;
+}

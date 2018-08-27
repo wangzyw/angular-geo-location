@@ -1,0 +1,25 @@
+<!-- Navigation -->
+<app-navbar></app-navbar>
+
+<div class="jumbotron bg-transparent text-center">
+  <div *ngIf="!user" class="card text-center">
+    <h6 class="card-header">
+      Geo Location Service
+    </h6>
+    <div class="card-block">
+      <h4 class="card-title">Not signed in</h4>
+      <p class="card-text">Sign in with</p>
+    </div>
+    <div class="card-block">
+      <button class="btn btn-social-icon btn-facebook" (click)="signInWithFB()"><span class="fa fa-facebook"></span></button>
+    </div>
+  </div>
+
+  <div *ngIf="user" class="card text-center">
+    <router-outlet></router-outlet>
+    <div class="card-block">
+      <h4 class="card-title">Signed in as {{ user.name }}</h4>
+      <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+    </div>
+  </div>
+</div>
